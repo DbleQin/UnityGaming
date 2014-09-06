@@ -157,6 +157,12 @@
     <Compile Include="Assets\NGUI\Scripts\UI\UITexture.cs" />
     <Compile Include="Assets\NGUI\Scripts\UI\UITooltip.cs" />
     <Compile Include="Assets\NGUI\Scripts\UI\UIViewport.cs" />
+    <Compile Include="Assets\Script\Globals\Globals.cs" />
+    <Compile Include="Assets\Script\Globals\Starter.cs" />
+    <Compile Include="Assets\Script\UIScript\UI_Main.cs" />
+    <Compile Include="Assets\Script\UIScript\UI_Manager.cs" />
+    <Compile Include="Assets\Script\UIScript\UI_Panel.cs" />
+    <Compile Include="Assets\Script\Util\Singleton.cs" />
     <None Include="Assets\NGUI\Resources\Shaders\Unlit - Premultiplied Colored 1.shader" />
     <None Include="Assets\NGUI\Resources\Shaders\Unlit - Premultiplied Colored 2.shader" />
     <None Include="Assets\NGUI\Resources\Shaders\Unlit - Premultiplied Colored 3.shader" />
