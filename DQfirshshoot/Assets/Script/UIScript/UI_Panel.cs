@@ -32,23 +32,14 @@ public abstract class UI_Panel : MonoBehaviour
     {
         if (null != UI_Manager.Instance)
         {
-
-
             transform.parent = UI_Manager.Instance.uicamera.transform;
-
-            UpdateLevelDepth();
-
-            //	_//DepthLevel = value;
-
+            UpdateUIScale();
         }
-        Resources.UnloadUnusedAssets();
     }
-    public void UpdateLevelDepth()
+    public void UpdateUIScale()
     {
         float scaleMin = UI_Manager.Instance.PanelScale;
-
         transform.localScale = new Vector3(scaleMin, scaleMin, scaleMin);
-
         Vector3 pos = transform.localPosition;
         pos.z = (GUI_NEAREST_Z + DepthLevel * GUI_ORDER_SPACE);///UI_Manager.RootScale.z;
         transform.localPosition = pos;
@@ -78,7 +69,6 @@ public abstract class UI_Panel : MonoBehaviour
     {
         DestroyImmediate(this.gameObject);
     }
-    // for register
     public void CloseImmediate(GameObject go)
     {
         DestroyImmediate(this.gameObject);
@@ -86,14 +76,7 @@ public abstract class UI_Panel : MonoBehaviour
     public void Close()
     {
         Destroy(this.gameObject);
-        GL.Clear(false, true, Color.black);
         Resources.UnloadUnusedAssets();
-    }
-
-    // for register
-    public void Close(GameObject go)
-    {
-        Destroy(this.gameObject);
     }
     #endregion
 

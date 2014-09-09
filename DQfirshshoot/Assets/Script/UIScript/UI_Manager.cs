@@ -202,7 +202,7 @@ public class UI_Manager : MonoBehaviour
                 _guiLoading[typeof(T).ToString()] = false;
 
                 gui.DepthLevel = layout;
-                gui.UpdateLevelDepth();
+                gui.UpdateUIScale();
                 gui.InitializeGUI();
 
                 UI_Manager.Instance.AddWindow(gui);

@@ -8,6 +8,7 @@ public class Globals : Singleton<Globals>
     /// EnterGameStarter
     /// </summary>
     public Starter MStarter = null;
+    public PlayerData MPlayerData = null;
 
     // Globals Class
     public Globals()
@@ -22,6 +23,8 @@ public class Globals : Singleton<Globals>
         {
             MStarter = go.GetComponent<Starter>();
             if (MStarter == null) UnityEngine.Debug.Log("global script doesn't have MStarter");
+
+            MPlayerData = new PlayerData();
         }
     }
 
